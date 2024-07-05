@@ -1,4 +1,6 @@
-class Apartamento():
+from torre import Torre
+
+class Apartamento:
     def __init__(self, id, numero):
         self.id = id
         self.numero = numero
