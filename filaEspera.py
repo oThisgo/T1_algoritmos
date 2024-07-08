@@ -1,6 +1,3 @@
-from apartamento import Apartamento
-
-
 class FilaEspera:
     def __init__(self):
         self.topo = None

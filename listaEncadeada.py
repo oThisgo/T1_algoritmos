@@ -1,4 +1,3 @@
-from apartamento import Apartamento
 from filaEspera import FilaEspera
 
 class ListaEncadeada:
@@ -6,16 +5,26 @@ class ListaEncadeada:
         self.topo = None
         self.tamanho = 0
         
-    def adicionar(self, item)
+    def adicionar(self, apartamento):
         if self.tamanho < 10:
             if self.topo:
                 topo = self.topo
-                while (topo.proximo):
+                while topo.proximo:
                     topo = topo.proximo
-                topo.proximo = Apartamento(item)
+                topo.proximo = apartamento
             else:
-                self.topo = Apartamento(item)
+                self.topo = apartamento
             self.tamanho += 1
-        elif self.tamanho == 10:
-            FilaEspera.adicionar(item)
+        else:
+            pass
+        
+    def imprimir(self):
+        atual = self.topo
+        if atual is None:
+            print("A lista está vazia.")
+        else:
+            print("Apartamentos com Vaga:")
+            while atual:
+                print(f"Apartamento {atual.numero} - {atual.torre.nome}, Vaga {atual.vaga}")
+                atual = atual.proximo
             
