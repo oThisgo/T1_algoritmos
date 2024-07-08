@@ -1,9 +1,8 @@
 class Torre:
-    def __init__(self, id, nome, endereco):
-        self.id = id
+    def __init__(self, nome, endereco):
+        self.id = 0
         self.nome = nome
         self.endereco = endereco
-    
-    def cadastrar():
-
-    def imprimir():
+        
+    def imprimir(self):
+        print(f"Nome: {self.nome}, Endereço: {self.endereco}")
