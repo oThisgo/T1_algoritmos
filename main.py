@@ -12,7 +12,12 @@ torre4 = Torre("Torre 4", "Av. Dorival Candido Luz de Oliveira, 157")
 
 def novo_apto():
     num = input("Digite o número do apartamento: ")
-    torre = int(input(f"1 - {torre1.imprimir()}\n2 - {torre2.imprimir()}\n3 - {torre3.imprimir()}\n4 - {torre4.imprimir()}\n\nDigite a torre deste apartamento: "))
+    print('\n')
+    torre1.imprimir()
+    torre2.imprimir()
+    torre3.imprimir()
+    torre4.imprimir()
+    torre = int(input("\nDigite o número da torre deste apartamento: "))
     
     if torre == 1:
         torre = torre1
@@ -25,7 +30,7 @@ def novo_apto():
     
     apto = Apartamento(num, torre)
     
-    if lista.tamanho < 2:
+    if lista.tamanho < 10:
         lista.adicionar(apto)
     else:
         fila.adicionar(apto)
@@ -40,9 +45,9 @@ def liberar_vaga():
         apto_fila.vaga = vaga
         lista.adicionar(apto_fila)
         print(f"Apartamento {apto_fila.numero} da Torre {apto_fila.torre.nome} foi movido para a vaga {vaga}.")
-        
+    
     fila.adicionar(apto_removido)
-
+        
 def menu():
     while True:
         opcao = int(input("\n ---MENU--- \n0 - EXIT\n1 - Cadastrar Apartamento\n2 - Imprimir Apartamentos com Vaga\n3 - Imprimir Apartamentos sem Vaga\n4 - Liberar Vaga\n\nDigite a opção desejada:"))

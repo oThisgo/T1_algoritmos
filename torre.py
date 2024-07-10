@@ -4,5 +4,8 @@ class Torre:
         self.nome = nome
         self.endereco = endereco
         
+    def cadastrar(self):
+        pass
+        
     def imprimir(self):
-        print(f"Nome: {self.nome}, Endereço: {self.endereco}")
+        print(f"{self.nome}, Endereço: {self.endereco}")

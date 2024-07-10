@@ -22,7 +22,7 @@ class ListaEncadeada:
             self.topo = self.topo.proximo
             self.tamanho -= 1
             return item_removido
-
+        
         anterior = self.topo
         atual = self.topo.proximo
         while atual is not None:
