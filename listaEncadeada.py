@@ -29,6 +29,7 @@ class ListaEncadeada:
         while atual: #loop para percorrer a lista enquanto houver um proximo
             if atual.vaga == vaga:
                 anterior.proximo = atual.proximo 
+                atual.proximo = None
                 self.tamanho -= 1
                 return atual
             anterior = atual

@@ -30,7 +30,7 @@ def novo_apto():
     
     apto = Apartamento(num, torre)
     
-    if lista.tamanho < 10:
+    if lista.tamanho < 3:
         lista.adicionar(apto)
     else:
         fila.adicionar(apto)
@@ -47,7 +47,7 @@ def liberar_vaga():
         print(f"Apartamento {apto_fila.numero} da {apto_fila.torre.nome} foi movido para a vaga {vaga}.")
     
     fila.adicionar(apto_removido)
-        
+
 def menu():
     while True:
         opcao = int(input("\n ---MENU--- \n0 - EXIT\n1 - Cadastrar Apartamento\n2 - Imprimir Apartamentos com Vaga\n3 - Imprimir Apartamentos sem Vaga\n4 - Liberar Vaga\n\nDigite a opção desejada: "))
@@ -67,6 +67,12 @@ def menu():
               
         elif opcao == 4:
             liberar_vaga()
-                                        
+
+        else:
+            print("Digite uma opção válida!")
+            pass
+
 if __name__ == "__main__":
       menu()
+    
+                                        
