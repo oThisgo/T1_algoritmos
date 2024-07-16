@@ -1,11 +1,11 @@
 import random
 
 class Apartamento:
-    def __init__(self, numero, torre, vaga = None):
+    def __init__(self, numero, torre):
         self.id = 0
         self.numero = numero
         self.torre = torre
-        self.vaga = vaga if vaga is not None else random.randint(100, 200)
+        self.vaga = random.randint(100, 900)
         self.proximo = None
         
     def cadastrar(self):

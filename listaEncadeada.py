@@ -4,7 +4,7 @@ class ListaEncadeada:
         self.tamanho = 0
         
     def adicionar(self, apartamento):
-        if self.topo:
+        if self.topo: #se a lista nao estiver vazia
             topo = self.topo
             while topo.proximo:
                 topo = topo.proximo
@@ -17,17 +17,18 @@ class ListaEncadeada:
         if self.topo is None:
             raise IndexError("A lista está vazia.")
         
-        if self.topo.vaga == vaga:
+        if self.topo.vaga == vaga: #verifica se o objeto no topo corresponde ao parametro
             item_removido = self.topo
-            self.topo = self.topo.proximo
+            self.topo = item_removido.proximo
+            item_removido.proximo = None
             self.tamanho -= 1
             return item_removido
         
         anterior = self.topo
         atual = self.topo.proximo
-        while atual is not None:
+        while atual: #loop para percorrer a lista enquanto houver um proximo
             if atual.vaga == vaga:
-                anterior.proximo = atual.proximo
+                anterior.proximo = atual.proximo 
                 self.tamanho -= 1
                 return atual
             anterior = atual
