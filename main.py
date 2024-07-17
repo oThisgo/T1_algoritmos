@@ -30,7 +30,7 @@ def novo_apto():
     
     apto = Apartamento(num, torre)
     
-    if lista.tamanho < 3:
+    if lista.tamanho < 10:
         lista.adicionar(apto)
     else:
         fila.adicionar(apto)
